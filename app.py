@@ -2,10 +2,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# Add this missing home route
 @app.route("/")
 def home():
-    return "Welcome to the Flask App!"
+    return "Hello from Flask CI/CD!"
 
 @app.route("/hello")
 def hello():
