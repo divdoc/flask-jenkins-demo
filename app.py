@@ -1,14 +1,15 @@
 from flask import Flask
 
-# Initialize the app FIRST
 app = Flask(__name__)
 
+# Add this missing home route
+@app.route("/")
+def home():
+    return "Welcome to the Flask App!"
 
-# THEN define your routes
 @app.route("/hello")
 def hello():
     return "Hello, World!"
-
 
 if __name__ == "__main__":
     app.run(debug=True)
